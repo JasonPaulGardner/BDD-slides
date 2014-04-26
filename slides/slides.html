@@ -1,0 +1,134 @@
+<div class="slide-layout-title">
+	<h1>BDD</h1>
+	<h2>An introduction to Behaviour Driven Development</h2>  
+</div>
+<hr>
+<div>
+	<h1>Need Assessment</h1>
+	<ul>
+		<li>Deficent requirements gathering processes</li>
+    <ul>
+      <li>Stories being created at sprint planning</li>
+      <li>Grooming meetings lacking in focus</li>
+      <li>Variation in understood of requirements entering sprint</li>
+    </ul>
+		<li>Deficent acceptance testing processes</li>
+    <ul>
+      <li>Testers not aware of what needs to be tested</li>
+      <li>No formalized explorative testing strategy</li>
+      <li>Lacking any form of automation</li>
+    </ul>
+    <li>Deficent Documentation</li>
+    <ul>
+      <li>New features not being documented</li>
+      <li>Existing documentation becoming out of date</li>
+      <li>Documentation not tied to release artifact</li>
+    </ul>
+	</ul>
+</div>
+<hr>
+<div>
+	<h1>What is Behaviour Driven Development</h1>
+	<img src="img/DanNorthTweet.png" />
+</div>
+<hr>
+<div>
+	<dl>
+    <dt>Using example</dt>
+    <dd>Real life concrete examples</dd>
+    <dt>at multiple levels</dt>
+    <dd>at all test levels <em>acceptance</em> <em>integration</em> and <em>unit</em></dd>
+    <dt>to create a shared understanding</dt>
+    <dd>between all stake holders: product owner, BA, DBA, UX Designer, QA Tester, DevOps, Technical Writer, Marketing and Support</dd>
+    <dt>and surface uncertainty</dt>
+    <dd>identify and resolve mis-understanding before implementation</dd>
+    <dt>to deliver software that matters</dt>
+    <dd>so that the implementation delivered fulfils the end users needs</dd>
+  </dl>
+</div>
+<hr>
+<div>
+	<h1>That sounds nice but how does that fullfil our needs</h1>
+  <h2>BDD work flow</h2>
+  <ol>
+    <li>Collaborate with all stakehoders on a Specification.</li>
+    <li>Ensure understanding through examples written in light weight markup eg. Gherkin.</li>
+    <li>Make Executable Specifications by parsing the markup.</li>
+    <li>Watch these new Pending unimplemented tests fail!</li>
+    <li>Implement the tests, watching them fail.</li>
+    <li>Write the Implementation, watch it pass!</li>
+  </ol>
+</div>
+<hr>
+<div>
+	<h1>Isn't that just Test Driven Development</h1>
+  <dl>
+    <dt>Yep!</dt>
+    <dd>
+      <p>BDD is just TDD modified to include everyone not just the developer</p>
+      <p>It facilitates collaboration and empowers stake holders by including then.</p>
+      <p>It focuses on the behaviour rather than the implementation which allows for out of the box thinking and inovation.</p>
+      <p>It produces a body of living documentation that by design can not become outdated. </p>
+    </dd>
+  </dl>
+</div>
+<hr>
+<div>
+	<h1>Tools for BDD in Java</h1>
+	<dl>
+    <dt>JBehave</dt>
+    <dd>
+      <p>Dan North's original offering</p>
+    </dd>
+    <dt>Concordian</dt>
+    <dd>
+      <p>uses extended html mark up rather than a DSL</p>
+    </dd>
+    <dt>Fitnesse</dt>
+    <dd>
+      <p>wiki based written by Uncle Bob "Robert Cecil Martin"</p>
+    </dd>
+    <dt>Cucumber</dt>
+    <dd>
+      <p>originaly a ruby solution now implemented in multiple languages including java javascript & C++</p>
+      <small>for PHP there is Behat &amp; for .NET there is SpecFlow<small>
+    </dd>
+  </dl>
+</div>
+<hr>
+<div>
+	<h1>Gherkin</h1>
+  <p>Is a Business Readable, ubiquitous testing Domain Specific Language</p>
+  <p>Gherkin is a line-oriented language that uses indentation to define structure.</p>
+  <p>Gherkin consists of the following key words:</p>
+  <ul>
+    <li>feature</li>
+    <li>background</li>
+    <li>scenario</li>
+    <li>scenario_outline</li>
+    <li>examples</li>
+    <li>given</li>
+    <li>when</li>
+    <li>then</li>
+    <li>and</li>
+    <li>but</li>
+  </ul>
+  <p>And thats all!</p>
+</div>
+<hr>
+<div>
+	<h1>An example of a Gherkin feature file</h1>
+  <code>
+Feature: Serve coffee
+    As a Software Developer
+    I want a cup of coffee 
+    So that I can stay awake to support a late night deployment
+    
+  Scenario: Get a coffee
+    Given there is at least 1 coffee pod
+    And it is not decaf
+    When I insert the pod into the machine
+    And press the coffee button
+    Then I should be served a coffee
+  </code>    
+</div>

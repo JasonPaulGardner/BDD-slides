@@ -1,0 +1,40 @@
+{
+  "name": "when",
+  "main": "when.js",
+  "version": "2.8.0",
+  "description": "A lightweight Promises/A+ and when() implementation, plus other async goodies.",
+  "keywords": [
+    "Promises/A+",
+    "promises-aplus",
+    "promise",
+    "promises",
+    "deferred",
+    "deferreds",
+    "when",
+    "async",
+    "asynchronous",
+    "cujo"
+  ],
+  "homepage": "https://github.com/cujojs/when",
+  "authors": [
+    "Brian Cavalier <brian@hovercraftstudios.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "docs",
+    "benchmark",
+    "node_modules",
+    "bower_components",
+    "test",
+    "build"
+  ],
+  "gitHead": "d79c216c62d1af28a9890741d5ed8d6bc2848a8e",
+  "readme": "<a href=\"http://promises-aplus.github.com/promises-spec\"><img src=\"http://promises-aplus.github.com/promises-spec/assets/logo-small.png\" alt=\"Promises/A+ logo\" align=\"right\" /></a>\r\n\r\n[![Build Status](https://travis-ci.org/cujojs/when.png?branch=master)](https://travis-ci.org/cujojs/when)\r\n\r\n# when.js\r\n\r\nWhen.js is cujoJS's lightweight [Promises/A+](http://promises-aplus.github.com/promises-spec) and `when()` implementation that powers the async core of [wire.js](https://github.com/cujojs/wire), cujoJS's IOC Container.  It features:\r\n\r\n* A rock solid, battle-tested Promise implementation\r\n* Resolving, settling, mapping, and reducing arrays of promises\r\n* Executing tasks in parallel and sequence\r\n* Transforming Node-style and other callback-based APIs into promise-based APIs\r\n\r\nIt passes the [Promises/A+ Test Suite](https://github.com/promises-aplus/promises-tests), is [very fast](https://github.com/cujojs/promise-perf-tests#test-results) and compact, and has no external dependencies.\r\n\r\n- [What's new](CHANGES.md)\r\n- [API docs](docs/api.md#api)\r\n- [Examples](https://github.com/cujojs/when/wiki/Examples)\r\n- [More info on the wiki](https://github.com/cujojs/when/wiki)\r\n\r\nInstallation\r\n------------\r\n\r\n#### AMD\r\n\r\nAvailble as `when` through [bower](http://bower.io) and [yeoman](https://github.com/yeoman/yo), or just clone the repo and load `when.js` from the root. When.js is AMD-compatible out of the box, so no need for shims.\r\n\r\n#### CommonJS/Node\r\n\r\n```\r\nnpm install when\r\n```\r\n\r\n[More help & other environments &raquo;](docs/installation.md)\r\n\r\nUsage\r\n-----\r\n\r\nPromises can be used to help manage complex and/or nested callback flows in a simple manner. To get a better handle on how promise flows look and how they can be helpful, there are a couple examples below (using commonjs).\r\n\r\nThis first example will print `\"hello world!!!!\"` if all went well, or `\"drat!\"` if there was a problem. It also uses [rest](https://github.com/cujojs/rest) to make an ajax request to a (fictional) external service.\r\n\r\n```js\r\nvar rest = require('rest');\r\n\r\nfetchRemoteGreeting()\r\n    .then(addExclamation)\r\n    .catch(handleError)\r\n    .done(function(greeting) {\r\n        console.log(greeting);\r\n    });\r\n\r\nfunction fetchRemoteGreeting() {\r\n    // returns a when.js promise for 'hello world'\r\n    return rest('http://example.com/greeting');\r\n}\r\n\r\nfunction addExclamation(greeting) {\r\n    return greeting + '!!!!'\r\n}\r\n\r\nfunction handleError(e) {\r\n    return 'drat!';\r\n}\r\n```\r\n\r\nThe second example shows off the power that comes with when's promise logic. Here, we get an array of numbers from a remote source and reduce them. The example will print `150` if all went well, and if there was a problem will print a full stack trace.\r\n\r\n```js\r\nvar when = require('when');\r\nvar rest = require('rest');\r\n\r\nwhen.reduce(when.map(getRemoteNumberList(), times10), sum)\r\n    .done(function(result) {\r\n        console.log(result);\r\n    });\r\n\r\nfunction getRemoteNumberList() {\r\n    // Get a remote array [1, 2, 3, 4, 5]\r\n    return rest('http://example.com/numbers').then(JSON.parse);\r\n}\r\n\r\nfunction sum(x, y) { return x + y; }\r\nfunction times10(x) {return x * 10; }\r\n```\r\n\r\n- For more examples, see [examples &raquo;](https://github.com/cujojs/when/wiki/Examples)\r\n- For the full documentation see [api docs &raquo;](docs/api.md#api)\r\n\r\nLicense\r\n-------\r\n\r\nLicensed under MIT. [See the license here &raquo;](LICENSE.txt)\r\n\r\nContributing\r\n------------\r\n\r\nPlease see the [contributing guide](CONTRIBUTING.md) for more information on running tests, opening issues, and contributing code to the project.\r\n\r\nReferences\r\n----------\r\n\r\nMuch of this code was inspired by the async innards of [wire.js](https://github.com/cujojs/wire), and has been influenced by the great work in [Q](https://github.com/kriskowal/q), [Dojo's Deferred](https://github.com/dojo/dojo), and [uber.js](https://github.com/phiggins42/uber.js).\r\n",
+  "readmeFilename": "README.md",
+  "_id": "when@2.8.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cujojs/when.git"
+  }
+}
