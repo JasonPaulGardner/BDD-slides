@@ -26,7 +26,7 @@ footer p {
 	color: #eee;
 }
 
-.slide code {
+.slide code.gherkin {
   font-family: monospace;
   white-space: pre;
 }
@@ -43,11 +43,6 @@ footer p {
 .slide h1 em {
 	color: #ccc;
 	font-style: normal;
-}
-
-.slide h1.logo {
-	background: url(../../../im/hovercraft-logotype-800.png) no-repeat 50% 50%;
-	text-indent: -9999px;
 }
 
 .slide h2 {
