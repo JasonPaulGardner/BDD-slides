@@ -26,6 +26,11 @@ footer p {
 	color: #eee;
 }
 
+.slide code {
+  font-family: monospace;
+  white-space: pre;
+}
+
 .slide h1 {
 	font-size: 3.2em;
 	font-weight: bold;
