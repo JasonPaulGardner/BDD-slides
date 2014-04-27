@@ -21,9 +21,18 @@ footer p {
 	background: none;
 }
 
+.blue {
+  color: #0044ee;
+}
 .slide {
 	font-size: 170%;
 	color: #eee;
+}
+
+.slide img.DanNorthTweet {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slide code.gherkin {
@@ -45,11 +54,6 @@ footer p {
 	font-style: normal;
 }
 
-.slide small {
-		font-size: .25em;
-		margin-left: .25em;
-}
-
 .slide .indented {
   margin-left: 5em;
 }
@@ -63,6 +67,11 @@ footer p {
 .slide p {
 	color: #eee;
 	margin-left: 2em;
+}
+
+.slide small {
+	margin-left: 2em;
+	font-size: .5em;
 }
 
 .slide em {
