@@ -84,7 +84,7 @@
     <dt>at multiple levels</dt>
     <dd>
       <p class="blue">targeting the most appropriate test level</p>
-      <p class="blue"> <em class="blue">acceptance</em>, <em class="blue">integration</em> and <em class="blue">unit</em></p></dd>
+      <p class="blue"> <em class="blue">system</em>, <em class="blue">integration</em> and <em class="blue">unit</em></p></dd>
   </dl>
 </div>
 <hr>
@@ -223,7 +223,7 @@
 Feature: Serve coffee
     As a Software Developer
     I want a cup of coffee 
-    So that I can stay awake to support a late night deployment
+    So that I can stay alert during a grooming session
     
   Scenario: Get a coffee
     Given there is at least 1 coffee pod
@@ -232,4 +232,36 @@ Feature: Serve coffee
     And press the coffee button
     Then I should be served a coffee
   </code>    
+</div>
+<hr>
+<div>
+	<h1>How to mis-use Cucumber</h1>
+  <dl>
+    <dt>Misuse #1: Cucumber for test automation</dt>
+    <dd>
+      <small>While cucumber can be used to run automated tests there are better alternatives with less overhead eg jUnit and phantomjsdriver for browser testing</small>
+      <small>This does not mean that cucumber tests should not be automated but rather they should not be you primary automated test</small>
+    </dd>
+    <dt>Misuse #2: Cucumber test written in isolation</dt>
+    <dd>
+      <small>If you aren't talking with your domain experts and stake holder when you create your Feature files, you're probably doing it wrong.</small>
+      <small>If you aren't at least showing them your Feature files and making changes based on their feedback, you're definitely doing it wrong.</small>
+      <small>If you aren't using Cucumber to enhance communication and collaboration, you're just writing automated tests and missing the whole point.</small>
+    </dd>
+    <dt>Misuse #3: Cucumber as integration test</dt>
+    <dd>
+      <small>Cucumber translates busness requirements expressed as examples into Acceptance test</small>
+      <small>Acceptance test should be written targeting the layer that most effectivly exposes the requirement</small>
+    </dd>
+    <dt>Misuse #4: Pre-mature optimization of Cucumber tests</dt>
+    <dd>
+      <small>Cucumber step definitions written with some care can enable significant re-use and composition resulting in rapid test development</small>
+      <small>This results in a temptation to over engineer Cucumber Tests</small>
+    </dd>
+    <dt>Misuse #5: Cucumber as a comprehensive regression suite</dt>
+    <dd>
+      <small>While Cucumber can and will provide a significant level of regression testing this is not primary purpose improved stake holder comunication is.</small>
+      <small>Where appropriate alternative regression testing techniques and tools should be used.</small>
+    </dd>
+  </dl>
 </div>
