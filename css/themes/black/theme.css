@@ -76,8 +76,12 @@ footer p {
 }
 
 .slide small {
-	text-align: right;
+	margin-left: 2em;
 	font-size: .5em;
+}
+
+.slide dd small {
+	margin-left: 10em;
 }
 
 .slide em {
