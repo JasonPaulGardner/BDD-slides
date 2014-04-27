@@ -54,6 +54,14 @@ footer p {
 	text-rendering: optimizeLegibility;
 }
 
+.slide h1 + ol {
+	margin-top: 2em;
+}
+
+.slide h1 + ul {
+	margin-top: 2em;
+}
+
 .slide h1 em {
 	color: #ccc;
 	font-style: normal;
@@ -153,6 +161,14 @@ footer p {
   .slide h3 {
 		margin-left: .4em;
 	}
+  
+  .slide h1 + ol {
+    margin-top: 1em;
+  }
+
+  .slide h1 + ul {
+    margin-top: 1em;
+  }
 
 	.slide li {
 		font-size: 1.25em;
