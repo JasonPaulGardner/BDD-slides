@@ -45,6 +45,15 @@ footer p {
 	font-style: normal;
 }
 
+.slide small {
+		font-size: .25em;
+		margin-left: .25em;
+}
+
+.slide .indented {
+  margin-left: 5em;
+}
+
 .slide h2 {
 	color: #ccc;
 	margin-top: 0;
