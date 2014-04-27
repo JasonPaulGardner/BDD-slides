@@ -1,10 +1,5 @@
-<div class="slide-layout-title">
-	<h1>BDD</h1>
-	<h2>An introduction to Behaviour Driven Development</h2>  
-</div>
-<hr>
 <div>
-	<h1>Issues that need to be addressed</h1>
+	<h1>The Issues</h1>
 	<ul>
 		<li>Deficent requirements gathering processes</li>
     <ul>
@@ -16,7 +11,7 @@
 </div>
 <hr>
 <div>
-	<h1>Issues that need to be addressed</h1>
+	<h1>The Issues</h1>
 	<ul>
 		<li>Deficent requirements gathering processes</li>
     <ul>
@@ -34,7 +29,7 @@
 </div>
 <hr>
 <div>
-	<h1>Issues that need to be addressed</h1>
+	<h1>The Issues</h1>
 	<ul>
 		<li>Deficent requirements gathering processes</li>
     <ul>
@@ -55,6 +50,11 @@
       <li>Documentation not tied to release artifact</li>
     </ul>
 	</ul>
+</div>
+<hr>
+<div class="slide-layout-title">
+	<h1>BDD</h1>
+	<h2>An introduction to Behaviour Driven Development</h2>  
 </div>
 <hr>
 <div>
@@ -149,8 +149,7 @@
 </div>
 <hr>
 <div>
-	<h1>That sounds nice but how does that fullfil our needs</h1>
-  <h2>BDD work flow</h2>
+	<h1>BDD work flow</h1>
   <ol>
     <li>Collaborate with all stakehoders on a Specification.</li>
     <li>Ensure understanding through examples written in light weight markup eg. Gherkin.</li>
@@ -234,34 +233,34 @@ Feature: Serve coffee
   </code>    
 </div>
 <hr>
+<div class="slide-layout-title">
+	<h1>Demo Time!</h1>
+  <h2>The Titles projects use of Cucumber.</h2>
+</div>
+<hr>
 <div>
 	<h1>How to mis-use Cucumber</h1>
+  <h3>IMO</h3>
   <dl>
-    <dt>Misuse #1: Cucumber for test automation</dt>
-    <dd>
-      <small>While cucumber can be used to run automated tests there are better alternatives with less overhead eg jUnit and phantomjsdriver for browser testing</small>
-      <small>This does not mean that cucumber tests should not be automated but rather they should not be you primary automated test</small>
-    </dd>
-    <dt>Misuse #2: Cucumber test written in isolation</dt>
+    <dt>Misuse #1: Cucumber test written in isolation</dt>
     <dd>
       <small>If you aren't talking with your domain experts and stake holder when you create your Feature files, you're probably doing it wrong.</small>
       <small>If you aren't at least showing them your Feature files and making changes based on their feedback, you're definitely doing it wrong.</small>
       <small>If you aren't using Cucumber to enhance communication and collaboration, you're just writing automated tests and missing the whole point.</small>
     </dd>
-    <dt>Misuse #3: Cucumber as integration test</dt>
+    <dt>Misuse #2: Cucumber for Behaviour-After Development (BAD)</dt>
     <dd>
-      <small>Cucumber translates busness requirements expressed as examples into Acceptance test</small>
-      <small>Acceptance test should be written targeting the layer that most effectivly exposes the requirement</small>
+      <small>If you are writting your Feature files after implementation development you are by passing your stake holders and risk delivering in correct behaviour</small>
+    </dd>
+    <dt>Misuse #3: Cucumber as exclusivly X test</dt>
+    <dd>
+      <small>Cucumber translates business requirements expressed as examples into Acceptance test</small>
+      <small>Acceptance test should be written targeting the layer that most effectivly exposes that requirement</small>
     </dd>
     <dt>Misuse #4: Pre-mature optimization of Cucumber tests</dt>
     <dd>
       <small>Cucumber step definitions written with some care can enable significant re-use and composition resulting in rapid test development</small>
-      <small>This results in a temptation to over engineer Cucumber Tests</small>
-    </dd>
-    <dt>Misuse #5: Cucumber as a comprehensive regression suite</dt>
-    <dd>
-      <small>While Cucumber can and will provide a significant level of regression testing this is not primary purpose improved stake holder comunication is.</small>
-      <small>Where appropriate alternative regression testing techniques and tools should be used.</small>
+      <small>This can results in a temptation to over engineer Cucumber Tests</small>
     </dd>
   </dl>
 </div>
