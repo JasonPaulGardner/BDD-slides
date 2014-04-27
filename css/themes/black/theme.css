@@ -81,6 +81,7 @@ footer p {
 }
 
 .slide dd small {
+  display: block;
 	margin-left: 10em;
 }
 
