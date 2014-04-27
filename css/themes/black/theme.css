@@ -31,38 +31,38 @@ footer p {
     margin-left: auto;
     margin-right: auto
 
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-       -moz-animation: fadein 2s; /* Firefox */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera */
-            animation: fadein 2s;
+    -webkit-animation: delayedfadein 5s linear 5s; /* Safari and Chrome */
+       -moz-animation: delayedfadein 5s linear 5s; /* Firefox */
+        -ms-animation: delayedfadein 5s linear 5s; /* Internet Explorer */
+         -o-animation: delayedfadein 5s linear 5s; /* Opera */
+            animation: delayedfadein 5s linear 5s;
 }
 
-@keyframes fadein {
+@keyframes delayedfadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
 
 /* Firefox */
-@-moz-keyframes fadein {
+@-moz-keyframes delayedfadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
 
 /* Safari and Chrome */
-@-webkit-keyframes fadein {
+@-webkit-keyframes delayedfadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
 
 /* Internet Explorer */
-@-ms-keyframes fadein {
+@-ms-keyframes delayedfadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }​
 
 /* Opera */
-@-o-keyframes fadein {
+@-o-keyframes delayedfadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }​
