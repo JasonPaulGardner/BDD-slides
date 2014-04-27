@@ -64,6 +64,12 @@ footer p {
 	margin-left: .5em;
 }
 
+.slide h3 {
+	color: #ccc;
+	margin-top: 0;
+	margin-left: .7em;
+}
+
 .slide p {
 	color: #eee;
 	margin-left: 2em;
@@ -132,6 +138,10 @@ footer p {
 	
 	.slide h2 {
 		margin-left: .25em;
+	}
+  
+  .slide h3 {
+		margin-left: .4em;
 	}
 
 	.slide li {
