@@ -295,25 +295,16 @@ Feature: Serve coffee
 <hr>
 <div>
 	<h1>An example use of GhostDriver</h1>
-  <code class="java">
- 
+  <code class="java"> 
 
     public static void main(String[] args) {
-
         WebDriver driver = new RemoteWebDriver(new URL("http://localhost:8080"), cap);
-
         driver.get("http://www.google.com");                        // Load Google
-
         WebElement element = driver.findElement(By.name("q"));      // Find the input box
-
         element.sendKeys("Cheese!");                                // Type "Cheese!"
-
         element.submit();                                           // Submit the form
-
         System.out.println("Page title is: " + driver.getTitle());  // Print the Page title
-
         driver.close();
-
     }
 
   </code>    
