@@ -240,7 +240,7 @@ Feature: Serve coffee
 <hr>
 <div>
 	<h1>How to mis-use Cucumber</h1>
-  <h3>IMO</h3>
+  <h3>In My Opinion</h3>
   <dl>
     <dt>Misuse #1: Cucumber test written in isolation</dt>
     <dd>
@@ -263,4 +263,57 @@ Feature: Serve coffee
       <small>This can results in a temptation to over engineer Cucumber Tests</small>
     </dd>
   </dl>
+</div>
+<hr>
+<div class="slide-layout-title">
+	<h1>GhostDriver</h1>
+	<h2>A WebDriver implementation for PhantomJS</h2>  
+</div>
+<hr>
+<div>
+	<h1>Why Should I care</h1>
+	<dl>
+    <dt>Headless</dt>
+    <dd>
+      <p>good for build servers &amp; CI</p>
+    </dd>
+    <dt>Fast</dt>
+    <dd>
+      <p>0.5s for a simple scripted Google search as opposed to 3s to 5s for the same search scripted in Firefox or Chrome</p>
+    </dd>
+    <dt>A real browser enging</dt>
+    <dd>
+      <p>not an emulation like HtmlUnit</p>
+    </dd>
+    <dt>Defacto Standard interface</dt>
+    <dd>
+      <p>The WebDriver Wire Protocol</p>
+    </dd>
+  </dl>  
+</div>
+<hr>
+<div>
+	<h1>An example of GhostDriver</h1>
+  <code class="java">
+ 
+
+    public static void main(String[] args) {
+
+        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:8080"), cap);
+
+        driver.get("http://www.google.com");                        // Load Google
+
+        WebElement element = driver.findElement(By.name("q"));      // Find the input box
+
+        element.sendKeys("Cheese!");                                // Type "Cheese!"
+
+        element.submit();                                           // Submit the form
+
+        System.out.println("Page title is: " + driver.getTitle());  // Print the Page title
+
+        driver.close();
+
+    }
+
+  </code>    
 </div>

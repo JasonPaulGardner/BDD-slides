@@ -40,6 +40,11 @@ footer p {
   white-space: pre;
 }
 
+.slide code.java {
+  font-family: monospace;
+  white-space: pre;
+}
+
 .slide h1 {
 	font-size: 3.2em;
 	font-weight: bold;
