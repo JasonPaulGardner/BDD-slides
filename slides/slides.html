@@ -1,7 +1,7 @@
 <div>
 	<h1>The Issues</h1>
 	<ul>
-		<li>Deficent requirements gathering processes</li>
+		<li>Deficient requirements gathering processes</li>
     <ul>
       <li>Stories being created at sprint planning</li>
       <li>Grooming meetings lacking in focus</li>
@@ -13,13 +13,13 @@
 <div>
 	<h1>The Issues</h1>
 	<ul>
-		<li>Deficent requirements gathering processes</li>
+		<li>Deficient requirements gathering processes</li>
     <ul>
       <li>Stories being created at sprint planning</li>
       <li>Grooming meetings lacking in focus</li>
       <li>Variations in understood of requirements entering sprint</li>
     </ul>
-		<li>Deficent acceptance testing processes</li>
+		<li>Deficient acceptance testing processes</li>
     <ul>
       <li>Testers not aware of what exactly needs to be tested</li>
       <li>No time for explorative testing strategy</li>
@@ -31,23 +31,23 @@
 <div>
 	<h1>The Issues</h1>
 	<ul>
-		<li>Deficent requirements gathering processes</li>
+		<li>Deficient requirements gathering processes</li>
     <ul>
       <li>Stories being created at sprint planning</li>
       <li>Grooming meetings lacking in focus</li>
       <li>Variations in understood of requirements entering sprint</li>
     </ul>
-		<li>Deficent acceptance testing processes</li>
+		<li>Deficient acceptance testing processes</li>
     <ul>
       <li>Testers not aware of what exactly needs to be tested</li>
       <li>No time for explorative testing strategy</li>
       <li>Lacking any form of automation</li>
     </ul>
-    <li>Deficent Documentation</li>
+    <li>Deficient Documentation</li>
     <ul>
       <li>New features not being documented</li>
       <li>Existing documentation becoming out of date</li>
-      <li>Documentation not tied to release artifact</li>
+      <li>Documentation not tied to release artefact</li>
     </ul>
 	</ul>
 </div>
@@ -144,7 +144,7 @@
       <p class="blue">identify and resolve misunderstanding before implementation</p></dd>
     <dt>to deliver software that matters</dt>
     <dd>
-      <p class="blue">so that the implementation delivered fulfills the end users' needs</p></dd>
+      <p class="blue">so that the implementation delivered fulfils the end users' needs</p></dd>
   </dl>
 </div>
 <hr>
@@ -152,9 +152,9 @@
 	<h1>BDD work flow</h1>
 
   <ol>
-    <li>Collaborate with all stakehoders on a Specification.</li>
-    <li>Ensure understanding through examples written in light-weight markup eg. Gherkin.</li>
-    <li>Make Executable Specifications by parsing the markup.</li>
+    <li>Collaborate with all stakeholders on a Specification.</li>
+    <li>Ensure understanding through examples written in light-weight mark-up e.g. Gherkin.</li>
+    <li>Make Executable Specifications by parsing the mark-up.</li>
     <li>Watch these new Pending unimplemented tests fail!</li>
     <li>Implement the tests, watching them fail.</li>
     <li>Write the Implementation, watch it pass!</li>
@@ -168,7 +168,7 @@
     <dd>
       <p>BDD is just TDD modified to include everyone not just the developer</p>
       <p>It facilitates collaboration and empowers stake holders by including then.</p>
-      <p>It focuses on the behaviour rather than the implementation which allows for out of the box thinking and inovation.</p>
+      <p>It focuses on the behaviour rather than the implementation which allows for out of the box thinking and innovation.</p>
       <p>It produces a body of living documentation that by design can not become outdated. </p>
     </dd>
   </dl>
@@ -191,7 +191,7 @@
     </dd>
     <dt>Cucumber</dt>
     <dd>
-      <p>originaly a ruby solution now implemented in multiple languages including java javascript & C++</p>
+      <p>originally a ruby solution now implemented in multiple languages including Java JavaScript & C++</p>
       <small>for PHP there is Behat &amp; for .NET there is SpecFlow</small>
     </dd>
   </dl>
@@ -214,7 +214,7 @@
     <li>and</li>
     <li>but</li>
   </ul>
-  <p>And thats all!</p>
+  <p>And that's all!</p>
 </div>
 <hr>
 <div>
@@ -251,12 +251,12 @@ Feature: Serve coffee
     </dd>
     <dt>Misuse #2: Cucumber for Behaviour-After Development (BAD)</dt>
     <dd>
-      <small>If you are writting your Feature files after implementation development you are by passing your stake holders and risk delivering in correct behaviour</small>
+      <small>If you are writing your Feature files after implementation development you are by passing your stake holders and risk delivering in correct behaviour</small>
     </dd>
-    <dt>Misuse #3: Cucumber as exclusivly X test</dt>
+    <dt>Misuse #3: Cucumber as exclusively X test</dt>
     <dd>
       <small>Cucumber translates business requirements expressed as examples into Acceptance test</small>
-      <small>Acceptance test should be written targeting the layer that most effectivly exposes that requirement</small>
+      <small>Acceptance test should be written targeting the layer that most effectively exposes that requirement</small>
     </dd>
     <dt>Misuse #4: Premature optimization of Cucumber tests</dt>
     <dd>
@@ -286,7 +286,7 @@ Feature: Serve coffee
     <dd>
       <p>not an emulation like HtmlUnit</p>
     </dd>
-    <dt>Defacto Standard interface</dt>
+    <dt>De-facto Standard interface</dt>
     <dd>
       <p>The WebDriver Wire Protocol</p>
     </dd>
@@ -298,13 +298,14 @@ Feature: Serve coffee
   <code class="java"> 
 
     public static void main(String[] args) {
-        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:8080"), cap);
+        RemoteWebDriver driver = new PhantomJSDriver(DesiredCapabilities.phantomjs());
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("http://www.google.com");                        // Load Google
         WebElement element = driver.findElement(By.name("q"));      // Find the input box
         element.sendKeys("Cheese!");                                // Type "Cheese!"
         element.submit();                                           // Submit the form
         System.out.println("Page title is: " + driver.getTitle());  // Print the Page title
-        driver.close();
+        driver.quit();
     }
 
   </code>    
